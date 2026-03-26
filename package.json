@@ -1,0 +1,23 @@
+{
+  "name": "mine",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "vitest",
+    "ch1": "node src/ch1-basics/custom-test-phase1.js && node src/ch1-basics/custom-test-phase2.js && node src/ch1-basics/custom-test-phase3.js",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.1.0",
+    "globals": "^17.4.0",
+    "prettier": "3.8.1",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.57.1",
+    "vite": "^8.0.1",
+    "vitest": "^4.1.1"
+  }
+}
