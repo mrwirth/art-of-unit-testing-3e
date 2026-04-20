@@ -2,7 +2,7 @@ export class RealLogger {
   info(text: string): void {
     console.log(text);
   }
-  debug(text: string, obj: any): void {
+  debug(text: string, obj: never): void {
     console.log(text);
     console.log(obj);
   }

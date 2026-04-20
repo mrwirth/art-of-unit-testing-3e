@@ -1,3 +1,4 @@
+import { describe, test } from "vitest";
 import { Substitute, Arg } from "@fluffy-spoon/substitute";
 import type { IComplicatedLogger } from "./interfaces/complicated-logger.ts";
 import { PasswordVerifier } from "./00-password-verifier.ts";

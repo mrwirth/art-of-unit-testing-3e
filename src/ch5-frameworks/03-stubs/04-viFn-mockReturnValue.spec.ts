@@ -1,3 +1,5 @@
+import { expect, test, vi } from "vitest";
+
 test("fake same return values", () => {
   const stubFunc = vi.fn().mockReturnValue("abc");
 

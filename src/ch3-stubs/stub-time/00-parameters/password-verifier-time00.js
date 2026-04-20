@@ -1,7 +1,7 @@
 import dayjs from "dayjs";
 import { DaysOfWeek } from "../DaysOfWeek.js";
 
-const verifyPassword = (input, rules) => {
+const verifyPassword = () => {
   const dayOfWeek = dayjs().day();
   if ([DaysOfWeek.SATURDAY, DaysOfWeek.SUNDAY].includes(dayOfWeek)) {
     throw Error("It's the weekend!");

@@ -1,7 +1,8 @@
+import { describe, expect, it, test } from "vitest";
 import { verifyPassword } from "../password-verifier0.js";
 
 test("v1: badly named test", () => {
-  const fakeRule = (input) => ({ passed: false, reason: "fake reason" });
+  const fakeRule = () => ({ passed: false, reason: "fake reason" });
 
   const errors = verifyPassword("any value", [fakeRule]);
 
@@ -15,7 +16,7 @@ test("v1: badly named test", () => {
 // Also uses `.toContain()` instead of `.toMatch()`, using a substring search instead
 // of a regex match.
 test("v1.1: verifyPassword, given a failing rule, returns errors", () => {
-  const fakeRule = (input) => ({ passed: false, reason: "fake reason" });
+  const fakeRule = () => ({ passed: false, reason: "fake reason" });
 
   const errors = verifyPassword("any value", [fakeRule]);
 

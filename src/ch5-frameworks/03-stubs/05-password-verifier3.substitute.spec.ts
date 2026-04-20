@@ -1,3 +1,4 @@
+import { describe, test } from "vitest";
 import type { MaintenanceWindow } from "./maintenance-window.ts";
 import { PasswordVerifier3 } from "./00-password-verifier3.ts";
 import type { IComplicatedLogger } from "../02-longinterfaces-faking/interfaces/complicated-logger.ts";

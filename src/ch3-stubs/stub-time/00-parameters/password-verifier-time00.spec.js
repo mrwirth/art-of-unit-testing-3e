@@ -1,4 +1,5 @@
 // Using dayjs as moment is deprecated, apparently with good reason.
+import { describe, expect, test } from "vitest";
 import dayjs from "dayjs";
 import {
   verifyPassword,

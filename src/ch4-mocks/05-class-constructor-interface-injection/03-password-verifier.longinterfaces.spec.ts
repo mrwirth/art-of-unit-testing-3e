@@ -1,6 +1,6 @@
+import { describe, expect, test } from "vitest";
 import type { IComplicatedLogger } from "./interfaces/complicated-logger";
 import { PasswordVerifier2 } from "./00-password-verifier2";
-import { expect } from "vitest";
 
 describe("working with long interfaces", () => {
   describe("password verifier", () => {
@@ -10,11 +10,11 @@ describe("working with long interfaces", () => {
       warnWritten = "";
       errorWritten = "";
 
-      debug(text: string, _obj: any): void {
+      debug(text: string): void {
         this.debugWritten = text;
       }
 
-      error(text: string, _location: string, _stacktrace: string): void {
+      error(text: string): void {
         this.errorWritten = text;
       }
 

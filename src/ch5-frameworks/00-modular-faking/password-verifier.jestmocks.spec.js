@@ -1,3 +1,4 @@
+import { afterEach, describe, expect, test, vi } from "vitest";
 import * as stubConfig from "./configuration-service.js";
 import * as mockLogger from "./complicated-logger.js";
 import { verifyPassword } from "./password-verifier.js";

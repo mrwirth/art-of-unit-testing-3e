@@ -1,3 +1,4 @@
+import { expect, test } from "vitest";
 import { PasswordVerifier } from "./00-password-verifier00.js";
 
 class FakeLogger {
@@ -9,7 +10,6 @@ class FakeLogger {
 }
 
 test("logger + passing scenario, calls logger with PASSED", () => {
-  let logged = "";
   const mockLog = new FakeLogger();
   const verifier = new PasswordVerifier([], mockLog);
   verifier.verify("any input");

@@ -2,8 +2,10 @@ import { DaysOfWeek } from "../DaysOfWeek.js";
 
 // A version of the password verifier that allows overriding individual
 // dependencies.  Seems kind of clunky.
+import dayjs from "dayjs";
+
 const originalDependencies = {
-  dayjs: require("dayjs"),
+  dayjs: dayjs,
 };
 
 let dependencies = { ...originalDependencies };
@@ -15,7 +17,7 @@ const inject = (fakes) => {
   };
 };
 
-const verifyPassword = (input, rules) => {
+const verifyPassword = () => {
   const dayOfWeek = dependencies.dayjs().day();
   if ([DaysOfWeek.SATURDAY, DaysOfWeek.SUNDAY].includes(dayOfWeek)) {
     throw new Error("It's the weekend!");

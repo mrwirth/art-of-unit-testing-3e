@@ -1,3 +1,4 @@
+import { describe, expect, it } from "vitest";
 import { verifyPassword2 } from "./00-password-verifier00.js";
 
 describe("password verifier with logger", () => {

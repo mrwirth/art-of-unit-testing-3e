@@ -1,6 +1,6 @@
+import { describe, expect, test } from "vitest";
 import { RealLogger } from "./real-logger";
 import { PasswordVerifier } from "./00-password-verifier";
-import { expect } from "vitest";
 
 describe("password verifier with interfaces", () => {
   test("verify, with logger, calls logger", () => {

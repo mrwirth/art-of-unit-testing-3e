@@ -2,7 +2,7 @@ import { DaysOfWeek } from "../DaysOfWeek.js";
 
 // Curried function
 const makeVerifier = (rules, dayOfWeekFn) => {
-  return function (input) {
+  return function () {
     if ([DaysOfWeek.SATURDAY, DaysOfWeek.SUNDAY].includes(dayOfWeekFn())) {
       throw new Error("It's the weekend!");
     }
@@ -12,7 +12,7 @@ const makeVerifier = (rules, dayOfWeekFn) => {
 
 // Constructor function pattern
 const Verifier = function (rules, dayOfWeekFn) {
-  this.verify = function (input) {
+  this.verify = function () {
     if ([DaysOfWeek.SATURDAY, DaysOfWeek.SUNDAY].includes(dayOfWeekFn())) {
       throw new Error("It's the weekend!");
     }
@@ -27,7 +27,7 @@ class PasswordVerifier {
     this.dayOfWeek = dayOfWeekFn;
   }
 
-  verify(input) {
+  verify() {
     if ([DaysOfWeek.SATURDAY, DaysOfWeek.SUNDAY].includes(this.dayOfWeek())) {
       throw new Error("It's the weekend!");
     }

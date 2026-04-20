@@ -1,5 +1,5 @@
+import { beforeEach, describe, expect, it, test } from "vitest";
 import { PasswordVerifier1 } from "../password-verifier1.js";
-import { expect } from "vitest";
 
 describe("v1: PasswordVerifier1", () => {
   describe("with a failing rule", () => {
@@ -148,7 +148,7 @@ describe("v6: PasswordVerifier1", () => {
   describe("with a passing rule", () => {
     let fakeRule, errors;
     beforeEach(() => {
-      fakeRule = (input) => ({ passed: true, reason: "" });
+      fakeRule = () => ({ passed: true, reason: "" });
       verifier.addRule(fakeRule);
       errors = verifier.verify("any value");
     });
@@ -160,7 +160,7 @@ describe("v6: PasswordVerifier1", () => {
   describe("with a failing and a passing rule", () => {
     let fakeRulePass, fakeRuleFail, errors;
     beforeEach(() => {
-      fakeRulePass = (input) => ({ passed: true, reason: "fake success" });
+      fakeRulePass = () => ({ passed: true, reason: "fake success" });
       fakeRuleFail = (input) => ({
         passed: false,
         reason: "fake reason" + input,
@@ -228,7 +228,7 @@ describe("v7: PasswordVerifier1", () => {
     return (input) => ({ passed: false, reason: `${reason} | ${input}` });
   };
 
-  const makePassingRule = () => (input) => {
+  const makePassingRule = () => () => {
     return { passed: true, reason: "" };
   };
 });
@@ -236,7 +236,7 @@ describe("v7: PasswordVerifier1", () => {
 // As before, but with factory methods replacing all of the
 // `beforeEach()`s, making it a bit more readable.
 const makeVerifier = () => new PasswordVerifier1();
-const passingRule = (input) => ({ passed: true, reason: "" });
+const passingRule = () => ({ passed: true, reason: "" });
 
 const makeVerifierWithPassingRule = () => {
   const verifier = makeVerifier();

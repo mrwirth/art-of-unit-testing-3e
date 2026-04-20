@@ -1,5 +1,5 @@
+import { describe, expect, test } from "vitest";
 import type { ILogger } from "./interfaces/logger";
-import { expect, test } from "vitest";
 import { PasswordVerifier } from "./00-password-verifier";
 
 class FakeLogger implements ILogger {

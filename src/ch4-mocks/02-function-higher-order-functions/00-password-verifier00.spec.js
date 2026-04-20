@@ -1,3 +1,4 @@
+import { describe, expect, test } from "vitest";
 import { makeVerifier } from "./00-password-verifier00.js";
 
 describe("higher order factory functions", () => {

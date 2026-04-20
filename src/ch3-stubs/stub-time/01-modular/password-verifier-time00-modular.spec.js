@@ -1,3 +1,4 @@
+import { describe, expect, it } from "vitest";
 import { inject, verifyPassword } from "./password-verifier-time00-modular.js";
 import { DaysOfWeek } from "../DaysOfWeek.js";
 

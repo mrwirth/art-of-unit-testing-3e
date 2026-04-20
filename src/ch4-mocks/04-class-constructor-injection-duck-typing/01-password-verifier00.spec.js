@@ -1,3 +1,4 @@
+import { describe, expect, test } from "vitest";
 import { PasswordVerifier } from "./00-password-verifier00.js";
 
 describe("duck typing with function constructor injection", () => {

@@ -7,7 +7,7 @@ class PasswordVerifier {
     this.timeProvider = timeProvider;
   }
 
-  verify(input) {
+  verify() {
     if (
       [DaysOfWeek.SATURDAY, DaysOfWeek.SUNDAY].includes(
         this.timeProvider.getDay(),

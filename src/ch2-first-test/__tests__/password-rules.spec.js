@@ -1,3 +1,4 @@
+import { describe, expect, test } from "vitest";
 import { oneUpperCaseRule } from "../password-rules.js";
 
 describe("v1: one uppercase rule", function () {
